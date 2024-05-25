@@ -67,7 +67,7 @@ function Home({homeRef}) {
             </div>
          </div>
          <div className='md:w-1/2 md:pl-48 mt-12 md:mt-8'>
-              <img src="/main.jpg" alt="main image" className='rounded-full md:w-[370px] md:h-[auto] mt:25 w-[250px] h-[auto]' />
+              <img src="./main.jpg" alt="main image" className='rounded-full md:w-[370px] md:h-[auto] mt:25 w-[250px] h-[auto]' />
          </div>
       </div>
     </div>
