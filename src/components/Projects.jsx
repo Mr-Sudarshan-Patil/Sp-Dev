@@ -20,8 +20,8 @@ function Projects({ ProjectRef }) {
             title: "Portfolio Website (Sp.Dev)",
             Dec: "This project is a portfolio website created using React for building the UI components and Tailwind CSS for styling.",
             Tech: <>&nbsp;<FaReact /> React, &nbsp;&nbsp;<RiTailwindCssFill /> Tailwind</>,
-            live: "https://github.com/Mr-Sudarshan-Patil/Randome-Link-Generator",
-            view: "https://github.com/Mr-Sudarshan-Patil/Randome-Link-Generator",
+            live: "https://mr-sudarshan-patil.github.io/Sp-Dev/",
+            view: "https://github.com/Mr-Sudarshan-Patil/Sp-Dev",
         },
         {
             id: 2,
