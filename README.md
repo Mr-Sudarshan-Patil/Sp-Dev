@@ -30,7 +30,6 @@ Sp.Dev is my personal portfolio website where I showcase my projects, skills, an
 - **React**: A JavaScript library for building user interfaces.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
-- **React Router**: For handling navigation within the application.
 
 ## Live Link
 Link: 
