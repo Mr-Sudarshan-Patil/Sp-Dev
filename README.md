@@ -1,8 +1,36 @@
-# React + Vite
+# Sp.Dev Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository for Sp.Dev, my personal portfolio website. This project is built using React and styled with Tailwind CSS.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Folder Structure](#folder-structure)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+Sp.Dev is my personal portfolio website where I showcase my projects, skills, and experiences. The website is designed to be a modern and responsive single-page application (SPA) using React and Tailwind CSS for styling.
+
+## Features
+
+- **Responsive Design**: Ensures the website looks great on all devices.
+- **Modern UI/UX**: Clean and user-friendly interface.
+- **Projects Showcase**: Display of personal projects with descriptions and links.
+- **Contact Form**: A form to allow visitors to get in touch.
+- **Smooth Animations**: Subtle animations for an enhanced user experience.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
+- **React Router**: For handling navigation within the application.
+
+## Live Link
+Link: 
