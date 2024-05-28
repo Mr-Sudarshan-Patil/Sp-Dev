@@ -41,7 +41,7 @@ function Navbar({ scrollToExperience, scrollToAbout, scrollToHome, scrollToTech,
           </div>
           {/* Hamburger icon to toggle mobile menu */}
           <div className='md:hidden' onClick={toggleMenu}>
-            {menu ? <RxCross2 /> : <FiMenu />}
+            {menu ? <RxCross2 size={{24}}/> : <FiMenu size={{24}}/>}
           </div>
         </div>
       </div>
