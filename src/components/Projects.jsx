@@ -6,11 +6,12 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from 'framer-motion';
+import { FaBootstrap } from "react-icons/fa";
 import random from '/Random.png';
 import apna from '/Apna.png'
-import amazon from '/Amazon.png'
 import Netflix from '/Netflix.png'
 import Todo from '/Todo.png'
+import Tech from '/tech.png'
 
 function Projects({ ProjectRef }) {
     const cardItems = [
@@ -25,6 +26,15 @@ function Projects({ ProjectRef }) {
         },
         {
             id: 2,
+            img: Tech,
+            title: "Tech-News App",
+            Dec: "Crafted a dynamic Tech-News platform with ReactJS, Bootstrap, and the News API, showcasing frontend proficiency and real-time data integration expertise.",
+            Tech: <>&nbsp;<FaReact /> React, &nbsp;&nbsp;<FaBootstrap /> Bootstrap</>,
+            view: "https://github.com/Mr-Sudarshan-Patil/News-app",
+            
+        },
+        {
+            id: 3,
             img: apna,
             title: "Apna College Website Clone",
             Dec: "This project is a responsive clone of the Apna College website, developed using Flexbox, Media Queries, and Grid for seamless adaptability across devices.",
@@ -34,7 +44,7 @@ function Projects({ ProjectRef }) {
             
         },
         {
-            id: 3,
+            id: 4,
             img: random,
             title: "Random Link Generator",
             Dec: "This project is a simple web application that generates random links at the click of a button. It's implemented using HTML for structure, CSS for styling, and JavaScript for dynamic behavior.",
@@ -44,23 +54,13 @@ function Projects({ ProjectRef }) {
             
         },
         {
-            id: 4,
+            id: 5,
             img: Netflix,
             title: "Netflix Clone",
             Dec: "This Netflix clone replicates the sleek, user-friendly interface of the original, ensuring optimal viewing across devices. Using CSS media queries, the layout seamlessly adapts to various screen sizes.",
             Tech: <>&nbsp;<FaHtml5 />HTML5, &nbsp;&nbsp;<FaCss3Alt />CSS3</>,
             live: "https://mr-sudarshan-patil.github.io/Netflix-Clone/",
             view: "https://github.com/Mr-Sudarshan-Patil/Netflix-Clone",
-            
-        },
-        {
-            id: 5,
-            img: amazon,
-            title: "Amazon Home Page Clone",
-            Dec: "This project is a basic representation of the Amazon website's home page, built using HTML and CSS. It serves as a demonstration of my front-end web development skills.",
-            Tech: <>&nbsp;<FaHtml5 />HTML5, &nbsp;&nbsp;<FaCss3Alt />CSS3</>,
-            live: "https://mr-sudarshan-patil.github.io/Amazon-Clone---Home-Page/",
-            view: "https://github.com/Mr-Sudarshan-Patil/Amazon-Clone---Home-Page",
             
         },
         {
@@ -73,6 +73,7 @@ function Projects({ ProjectRef }) {
             view: "https://github.com/Mr-Sudarshan-Patil/ToDo-List-WebPage",
             
         },
+        
     
         // Add more card items if needed
     ];
@@ -102,9 +103,16 @@ function Projects({ ProjectRef }) {
                                         <p className="mb-3 text-sm text-gray-700 dark:text-gray-400 font-semibold flex justify-center items-center flex-wrap">Tech Stack: {Tech}</p>
                                     </div>
                                     <div className="flex justify-between mt-auto">
-                                        <a href={live} target="_blank" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-pink-700 rounded-lg hover:bg-pink-800 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800 md:py-3 md:px-4">
-                                            Live Link
-                                        </a>
+                                    { id !== 2 && live ? (
+                                                <a href={live} target="_blank" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-pink-700 rounded-lg hover:bg-pink-800 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800 md:py-3 md:px-4">
+                                                    Live Link
+                                                </a>
+                                            ) : (
+                                                <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-400 bg-gray-200 rounded-lg cursor-not-allowed md:py-3 md:px-4" disabled>
+                                                    No Live Link
+                                                </button>
+                                            )}
+                                        
                                         <a href={view} target="_blank" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 md:py-3 md:px-4">
                                             View Source Code
                                         </a>

@@ -13,19 +13,19 @@ import { FaGitAlt } from "react-icons/fa6";
 import { LiaIndustrySolid } from "react-icons/lia";
 import { CiLocationOn } from "react-icons/ci";
 import { MdDateRange } from "react-icons/md";
-
+import Static from './Static';
 
 function About({ experienceRef , aboutRef}) {
   return (
     <>
-        <p className='text-2xl font-semibold mt-9 text-center mb-[-40px]' ref={aboutRef} style={{ paddingTop: '100px' }}>About Me...</p>
+        <p className='text-2xl font-semibold mt-9 text-center mb-[-40px]' ref={aboutRef} style={{ paddingTop: '85px' }}>About Me...</p>
         <div className=' max-w-screen-2xl container mx-auto px-4 md:px-20 my-20 flex flex-row-reverse'>
         <div className='flex flex-col'>
          <div className='space-y-2'>
             <p className='text-1xl md:text-md text-justify '>Hi, I'm Sudarshan Patil, a Survey Programmer with a B.Tech in Electronics and Telecommunication and 1.6 years of industrial experience. I specialize in front-end technologies, including HTML, CSS, JavaScript, jQuery, and Python, and have contributed to over 150 web surveys and led more than 48 projects. I have also undertaken numerous personal front-end projects. Currently, I am expanding my skills by learning the MERN stack and seeking front-end developer opportunities. My mission is to leverage my expertise to create user-friendly, efficient web applications while continuing to grow in a dynamic development environment.</p>
             <br />
             {/* Social media icons */}
-            <div className='space-y-2'>
+            <div className='space-y-2 flex flex-col items-center justify-center'>
                 <h1 className='text-1xl font-medium '>Currently Working on...</h1>
                 <div className='flex space-x-3 text-2xl'>
                   <ul className='flex space-x-3 text-2xl'>
@@ -63,15 +63,9 @@ function About({ experienceRef , aboutRef}) {
                     </li>
                   </ul>
                 </div>
-            </div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+                </div>
+                <Static/>
+           
             <hr className='w-full'/>
             <p className=' text-2xl font-semibold mt-9 mb-4 text-center }' style={{paddingTop: '100px'}} ref={experienceRef}>Experience</p>
             <br/>
@@ -129,10 +123,9 @@ function About({ experienceRef , aboutRef}) {
                     </div>
                 </div>
             </div>
-            
          </div>
-
       </div>
+      
     </div>
     <br/>
     <hr/>

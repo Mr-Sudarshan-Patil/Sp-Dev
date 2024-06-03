@@ -11,7 +11,7 @@ function Home({homeRef}) {
     <>
     <div ref={homeRef} style={{ paddingTop: '50px' }} className=' max-w-screen-2xl container mx-auto px-4 md:px-20 my-20 flex flex-row-reverse'>
       <div className='flex flex-col md:flex-row justify-center items-center'>
-         <div className='md:w-1/2 mt-10 space-y-2 '>
+         <div className='md:w-1/2 mt-10 md:mt-0 space-y-2 '>
             <span className='text-xl font-medium'>Welcome In My Feed</span>
            <div className='flex space-x-1 text-2xl md:text-4xl flex-wrap'>
             <h1 >Hello, I'm a</h1>
