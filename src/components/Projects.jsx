@@ -30,7 +30,8 @@ function Projects({ ProjectRef }) {
             title: "Tech-News App",
             Dec: "Crafted a dynamic Tech-News platform with ReactJS, Bootstrap, and the News API, showcasing frontend proficiency and real-time data integration expertise.",
             Tech: <>&nbsp;<FaReact /> React, &nbsp;&nbsp;<FaBootstrap /> Bootstrap</>,
-            view: "https://github.com/Mr-Sudarshan-Patil/News-app",
+            live: "https://mr-sudarshan-patil.github.io/News-App/",
+            view: "https://github.com/Mr-Sudarshan-Patil/News-App",
             
         },
         {
@@ -103,16 +104,9 @@ function Projects({ ProjectRef }) {
                                         <p className="mb-3 text-sm text-gray-700 dark:text-gray-400 font-semibold flex justify-center items-center flex-wrap">Tech Stack: {Tech}</p>
                                     </div>
                                     <div className="flex justify-between mt-auto">
-                                    { id !== 2 && live ? (
-                                                <a href={live} target="_blank" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-pink-700 rounded-lg hover:bg-pink-800 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800 md:py-3 md:px-4">
+                                        <a href={live} target="_blank" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-pink-700 rounded-lg hover:bg-pink-800 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800 md:py-3 md:px-4">
                                                     Live Link
-                                                </a>
-                                            ) : (
-                                                <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-400 bg-gray-200 rounded-lg cursor-not-allowed md:py-3 md:px-4" disabled>
-                                                    No Live Link
-                                                </button>
-                                            )}
-                                        
+                                        </a>
                                         <a href={view} target="_blank" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 md:py-3 md:px-4">
                                             View Source Code
                                         </a>
