@@ -97,7 +97,7 @@ useEffect(()=>{
 
   return (
     <>
-      <div className=' max-w-screen-2xl container mx-auto px-4 md:px-20 h-14 shadow-md fixed top-0 left-0 max-w-full z-40 bg-white'>
+      <div className='container mx-auto px-4 md:px-20 h-14 shadow-md fixed top-0 left-0 max-w-full z-40 bg-white'>
         <div className='flex justify-between h-full items-center'>
           <div ref={navLogo} className='md:text-xl font-medium'>
             <span  className='text-pink-500 font-semibold'>&lt;</span> Sp.Dev <span className='text-pink-500 font-semibold'>&#47;&gt;</span>
