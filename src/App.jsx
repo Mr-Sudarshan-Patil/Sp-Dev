@@ -62,10 +62,10 @@ function App() {
   };
 
   return (
-    // <>
-    //   {isLoading ? (
-    //     <Loading onComplete={() => setIsLoading(false)} />
-    //   ) : (
+    <>
+      {isLoading ? (
+        <Loading onComplete={() => setIsLoading(false)} />
+      ) : (
         <>
           <Navbar
             scrollToExperience={scrollToExperience}
@@ -83,8 +83,8 @@ function App() {
           <Contact ContactRef={ContactRef} />
           <Footer />
         </>
-    //   )}
-    // </>
+      )}
+    </>
   );
 }
 
