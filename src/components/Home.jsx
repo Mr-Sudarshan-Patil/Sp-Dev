@@ -17,8 +17,6 @@ let text3 = useRef([]);
 let text4 = useRef([]);
 let imageRef = useRef([]);
 let SocialRef = useRef([]);
-let socialIcon = SocialRef.current.children;
-
 
 useGSAP(() => {
   let tl = gsap.timeline();
@@ -47,9 +45,13 @@ useGSAP(() => {
     opacity: 0,
     duration: 1,
   })
-  .fromTo(
+
+  
+const socialIcon = SocialRef.current.children;
+
+  tl.fromTo(
     socialIcon,
-    { opacity: 0, y:50},
+    { opacity: 0, y: 50},
     {
       opacity: 1,
       y: 0,
@@ -73,6 +75,7 @@ useEffect(()=>{
       transformOrigin: "center center"
      }
     );
+
 }, []);
 
 
