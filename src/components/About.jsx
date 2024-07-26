@@ -1,5 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 // Tech icons
 import { FaReact } from "react-icons/fa";
@@ -15,20 +20,64 @@ import { CiLocationOn } from "react-icons/ci";
 import { MdDateRange } from "react-icons/md";
 import Static from './Static';
 
+
 function About({ experienceRef , aboutRef}) {
+
+  let text2 = useRef([]);
+  let text3 = useRef([]);
+  let TechRef = useRef([]);
+  let TechRefIcon = TechRef.current.children;
+  
+  useGSAP(() => {
+    let tl = gsap.timeline({
+      ScrollTrigger: {
+        trigger: ".page2", // Add a trigger element
+        start: "top 50%", // Start animation when the top of the trigger is 80% from the top of the viewport
+        end: "bottom 50%", // End animation when the bottom of the trigger is 30% from the top of the viewport
+        scrub: true, // Smoothly animate as you scroll
+        markers: true,
+      }
+    });
+
+    tl.from(text2.current, {
+      y: -50,
+      opacity: 0,
+      duration: 1,
+    })
+    .from(text3.current, {
+      y: -50,
+      opacity: 0,
+      duration: 1,
+    })
+    .fromTo(
+      TechRef.current.children,
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: 'power3.out',
+        stagger: 0.5,
+      }
+    );
+  
+  }, []);
+
+
   return (
     <>
-        <p className='text-2xl font-semibold mt-9 text-center mb-[-40px]' ref={aboutRef} style={{ paddingTop: '85px' }}>About Me...</p>
+    <div className=' w-full'>
+        <p  className=' text-2xl font-semibold mt-9 text-center mb-[-40px]' ref={aboutRef} style={{ paddingTop: '85px' }}>About Me...</p>
         <div className=' max-w-screen-2xl container mx-auto px-4 md:px-20 my-20 flex flex-row-reverse'>
         <div className='flex flex-col'>
-         <div className='space-y-2'>
-            <p className='text-1xl md:text-md text-justify '>Hi, I'm Sudarshan Patil, a Survey Programmer with a B.Tech in Electronics and Telecommunication and 1.6 years of industrial experience. I specialize in front-end technologies, including HTML, CSS, JavaScript, jQuery, and Python, and have contributed to over 150 web surveys and led more than 48 projects. I have also undertaken numerous personal front-end projects. Currently, I am expanding my skills by learning the MERN stack and seeking front-end developer opportunities. My mission is to leverage my expertise to create user-friendly, efficient web applications while continuing to grow in a dynamic development environment.</p>
+         <div className=' page2 space-y-2'>
+            <p ref={text2} className='text-1xl md:text-md text-justify '>Hi, I'm Sudarshan Patil, a Survey Programmer with a B.Tech in Electronics and Telecommunication and 1.6 years of industrial experience. I specialize in front-end technologies, including HTML, CSS, JavaScript, jQuery, and Python, and have contributed to over 150 web surveys and led more than 48 projects. I have also undertaken numerous personal front-end projects. Currently, I am expanding my skills by learning the MERN stack and seeking front-end developer opportunities. My mission is to leverage my expertise to create user-friendly, efficient web applications while continuing to grow in a dynamic development environment.</p>
             <br />
             {/* Social media icons */}
             <div className='space-y-2 flex flex-col items-center justify-center'>
-                <h1 className='text-1xl font-medium '>Currently Working on...</h1>
+                <h1 ref={text3} className='text-1xl font-medium '>Currently Working on...</h1>
                 <div className='flex space-x-3 text-2xl'>
-                  <ul className='flex space-x-3 text-2xl'>
+                  <ul ref={TechRef} className='flex space-x-3 text-2xl'>
                     <li>
                       {" "}
                       <FaReact className="hover:scale-105 duration-200 cursor-pointer hover:text-pink-500" />
@@ -65,7 +114,7 @@ function About({ experienceRef , aboutRef}) {
                 </div>
                 </div>
                 <Static/>
-           
+                </div>
             <hr className='w-full'/>
             <p className=' text-2xl font-semibold mt-9 mb-4 text-center }' style={{paddingTop: '100px'}} ref={experienceRef}>Experience</p>
             <br/>

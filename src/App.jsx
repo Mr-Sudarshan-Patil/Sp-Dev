@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Download from './components/Download';
@@ -7,8 +7,12 @@ import TechStack from './components/TechStack';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Loading from './components/Loading';
+import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   const homeRef = useRef(null);
   const experienceRef = useRef(null);
   const aboutRef = useRef(null);
@@ -16,6 +20,10 @@ function App() {
   const ProjectRef = useRef(null);
   const ContactRef = useRef(null);
 
+  useEffect(() => {
+    const locomotiveScroll = new LocomotiveScroll();
+    return () => locomotiveScroll.destroy();
+  }, []);
 
   const scrollToHome = () => {
     if (homeRef.current) {
@@ -53,17 +61,29 @@ function App() {
     }
   };
 
-
   return (
     <>
-      <Navbar scrollToExperience={scrollToExperience} scrollToAbout={scrollToAbout} scrollToHome={scrollToHome} scrollToTech={scrollToTech} scrollToProject={scrollToProject} scrollToContact={scrollToContact}/>
-      <Home homeRef={homeRef}/>
-      <Download />
-      <About experienceRef={experienceRef} aboutRef={aboutRef} />
-      <TechStack TechRef={TechRef} />
-      <Projects ProjectRef={ProjectRef} />
-      <Contact ContactRef={ContactRef}/>
-      <Footer/>
+      {isLoading ? (
+        <Loading onComplete={() => setIsLoading(false)} />
+      ) : (
+        <>
+          <Navbar
+            scrollToExperience={scrollToExperience}
+            scrollToAbout={scrollToAbout}
+            scrollToHome={scrollToHome}
+            scrollToTech={scrollToTech}
+            scrollToProject={scrollToProject}
+            scrollToContact={scrollToContact}
+          />
+          <Home homeRef={homeRef} />
+          <Download />
+          <About experienceRef={experienceRef} aboutRef={aboutRef} />
+          <TechStack TechRef={TechRef} />
+          <Projects ProjectRef={ProjectRef} />
+          <Contact ContactRef={ContactRef} />
+          <Footer />
+        </>
+      )}
     </>
   );
 }

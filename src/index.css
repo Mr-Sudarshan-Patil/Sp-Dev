@@ -8,6 +8,7 @@
 
 body {
   font-family: Fredoka;
+  overflow-x: hidden;
 }
 
 /* Webkit Browsers (Chrome, Safari) */
@@ -33,3 +34,5 @@ html {
   scrollbar-width: thin; /* Thickness of the scrollbar */
   scrollbar-color: #be185d #ffffff; /* Color of the scrollbar thumb (pink) and track (white) */
 }
+
+

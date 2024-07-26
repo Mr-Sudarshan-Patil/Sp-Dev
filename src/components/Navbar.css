@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+
+
+.main-tool-bar {
+  height: 80px;
+  background: red;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: ease 0.4s;
+  &--scrolled {
+    height: 40px;
+  }
+}
+
