@@ -22,14 +22,14 @@ import Static from './Static';
 
 
 function About({ experienceRef , aboutRef}) {
-
+  let page2 = useRef([]);
   let text2 = useRef([]);
   let text3 = useRef([]);
   let TechRef = useRef([]);
   let TechRefIcon = TechRef.current.children;
   
   useGSAP(() => {
-    let tl = gsap.timeline({
+    let tl = gsap.timeline(page2.current,{
       ScrollTrigger: {
         trigger: ".page2", // Add a trigger element
         start: "top 50%", // Start animation when the top of the trigger is 80% from the top of the viewport
@@ -66,7 +66,7 @@ function About({ experienceRef , aboutRef}) {
 
   return (
     <>
-    <div className=' w-full'>
+    <div ref={page2} className=' w-full'>
         <p  className=' text-2xl font-semibold mt-9 text-center mb-[-40px]' ref={aboutRef} style={{ paddingTop: '85px' }}>About Me...</p>
         <div className=' max-w-screen-2xl container mx-auto px-4 md:px-20 my-20 flex flex-row-reverse'>
         <div className='flex flex-col'>
@@ -120,6 +120,22 @@ function About({ experienceRef , aboutRef}) {
             <br/>
             <div className=' border-b-2 mt-9'>
                 <div className='flex justify-between'>
+                <h1 className='text-md md:text-xl text-[#666666]'>Freelance Frontend Developer</h1>
+                <span className='text-[0.7rem]  md:text-sm   rounded-full bg-[#D7FFE0] text-[#018C0F] text-center p-1'>Full Time</span>
+                </div>
+                <div className='flex justify-between mt-5'>
+                    <div className='flex  flex-wrap gap-2 md:gap-5 items-center'>
+                    <p className=' text-xs md:text-sm flex justify-center items-center' ><LiaIndustrySolid />Self-employed</p>
+                    <p className='text-xs md:text-sm flex justify-center items-center'><CiLocationOn /> Nandurbar</p>
+                    </div>
+                    <div>
+                    <p className='text-xs md:text-sm flex justify-center items-center' ><MdDateRange />Feb 2024 - Present</p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div className=' border-b-2 mt-9'>
+                <div className='flex justify-between'>
                 <h1 className='text-md md:text-xl text-[#666666]'>Survey Programmer</h1>
                 <span className='text-[0.7rem]  md:text-sm   rounded-full bg-[#D7FFE0] text-[#018C0F] text-center p-1'>Full Time</span>
                 </div>
@@ -133,8 +149,6 @@ function About({ experienceRef , aboutRef}) {
                     </div>
                 </div>
             </div>
-            
-            <br/>
             <br/>
             <div className=' border-b-2 mt-9'>
                 <div className='flex justify-between'>
@@ -147,11 +161,10 @@ function About({ experienceRef , aboutRef}) {
                     <p className='text-xs md:text-sm flex justify-center items-center'><CiLocationOn /> Nagpur</p>
                     </div>
                     <div>
-                    <p className='text-xs md:text-sm flex justify-center items-center' ><MdDateRange />May 2022 - Dec 2023</p>
+                    <p className='text-xs md:text-sm flex justify-center items-center' ><MdDateRange />Dec 2020 - Jan 2021</p>
                     </div>
                 </div>
             </div>
-            <br/>
             <br/>
             <br/>
             <p className='text-2xl font-semibold mt-12 mb-4 text-center'>Education</p>
@@ -169,6 +182,40 @@ function About({ experienceRef , aboutRef}) {
                     </div>
                     <div>
                     <p className='text-xs md:text-sm flex justify-center items-center' ><MdDateRange />2017 - 2021</p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div className=' border-b-2 mt-9'>
+                <div className='flex justify-between'>
+                <h1 className='text-md md:text-xl text-[#666666]'>G.T.Patil Arts,Commerce & Science College</h1>
+                <span className='text-[0.7rem]  md:text-sm   rounded-full bg-[#D7FFE0] text-[#018C0F] text-center p-1'>Full Time</span>
+                </div>
+                <div className=' text-xs md:text-sm'>Science (PCME)</div>
+                <div className='flex justify-between mt-5'>
+                    <div className='flex  flex-wrap gap-2 md:gap-5 items-center'>
+                    <p className=' text-xs md:text-sm flex justify-center items-center' ><LiaIndustrySolid />Maharashtra State Board</p>
+                    <p className='text-xs md:text-sm flex justify-center items-center'><CiLocationOn />Nandurbar</p>
+                    </div>
+                    <div>
+                    <p className='text-xs md:text-sm flex justify-center items-center' ><MdDateRange />2015 - 2017</p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div className=' border-b-2 mt-9'>
+                <div className='flex justify-between'>
+                <h1 className='text-md md:text-xl text-[#666666]'>Smt. Hiriben Govinddas Shroff High School</h1>
+                <span className='text-[0.7rem]  md:text-sm   rounded-full bg-[#D7FFE0] text-[#018C0F] text-center p-1'>Full Time</span>
+                </div>
+                <div className=' text-xs md:text-sm'>General</div>
+                <div className='flex justify-between mt-5'>
+                    <div className='flex  flex-wrap gap-2 md:gap-5 items-center'>
+                    <p className=' text-xs md:text-sm flex justify-center items-center' ><LiaIndustrySolid />Maharashtra State Board</p>
+                    <p className='text-xs md:text-sm flex justify-center items-center'><CiLocationOn /> Nandurbar</p>
+                    </div>
+                    <div>
+                    <p className='text-xs md:text-sm flex justify-center items-center' ><MdDateRange />2014 - 2015</p>
                     </div>
                 </div>
             </div>

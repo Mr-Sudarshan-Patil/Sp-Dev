@@ -1,13 +1,20 @@
+
+// Icons added from material us
 import React, { useEffect, useRef } from 'react'
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ReactTyped } from "react-typed";
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
+
+// GSAP Plugins
+
+import gsap from 'gsap';
 gsap.registerPlugin(useGSAP);
+
+// =========================================================
 
 function Home({homeRef}) {
 
@@ -127,7 +134,7 @@ useEffect(()=>{
                       </a>
                     </li>
                     <li>
-                     <a href="https://www.instagram.com/__sudarshan.patil__/" target='_blank'>
+                     <a href="https://www.instagram.com/_er_sp_?igsh=dzZmajAxZ2czM3d2" target='_blank'>
                       <FaInstagram className="hover:scale-105 duration-200 cursor-pointer hover:text-pink-500" />
                       </a>
                     </li>

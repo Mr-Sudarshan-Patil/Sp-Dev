@@ -7,11 +7,15 @@ import { FaCss3Alt } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from 'framer-motion';
 import { FaBootstrap } from "react-icons/fa";
+import { DiMongodb } from "react-icons/di";
+import { FaNodeJs } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
 import random from '/Random.png';
 import apna from '/Apna.png'
 import Netflix from '/Netflix.png'
 import Todo from '/Todo.png'
 import Tech from '/tech.png'
+import Zerodha from '/Zerodha.png'
 
 function Projects({ ProjectRef }) {
     const cardItems = [
@@ -24,8 +28,18 @@ function Projects({ ProjectRef }) {
             live: "https://mr-sudarshan-patil.github.io/Sp-Dev/",
             view: "https://github.com/Mr-Sudarshan-Patil/Sp-Dev",
         },
-        {
+         {
             id: 2,
+            img: Zerodha,
+            title: "Zerodha Clone: Trading Application",
+            Dec: "Developed a Zerodha clone with real-time data, portfolio management, order execution, and secure authentication.",
+            Tech: <><FaReact /> React, &nbsp;&nbsp;<RiTailwindCssFill />&nbsp;&nbsp;<DiMongodb />MongoDB,&nbsp;<FaNodeJs />NodeJs,&nbsp;<SiExpress />ExpressJs</>, 
+            live: "https://zerodha-frontend.vercel.app/",
+            view: "https://github.com/Mr-Sudarshan-Patil/zerodha-frontend",
+            
+        },
+        {
+            id: 3,
             img: Tech,
             title: "Tech-News App",
             Dec: "Crafted a dynamic Tech-News platform with ReactJS, Bootstrap, and the News API, showcasing frontend proficiency and real-time data integration expertise.",
@@ -35,7 +49,7 @@ function Projects({ ProjectRef }) {
             
         },
         {
-            id: 3,
+            id: 4,
             img: apna,
             title: "Apna College Website Clone",
             Dec: "This project is a responsive clone of the Apna College website, developed using Flexbox, Media Queries, and Grid for seamless adaptability across devices.",
@@ -45,7 +59,7 @@ function Projects({ ProjectRef }) {
             
         },
         {
-            id: 4,
+            id: 5,
             img: random,
             title: "Random Link Generator",
             Dec: "This project is a simple web application that generates random links at the click of a button. It's implemented using HTML for structure, CSS for styling, and JavaScript for dynamic behavior.",
@@ -55,7 +69,7 @@ function Projects({ ProjectRef }) {
             
         },
         {
-            id: 5,
+            id: 6,
             img: Netflix,
             title: "Netflix Clone",
             Dec: "This Netflix clone replicates the sleek, user-friendly interface of the original, ensuring optimal viewing across devices. Using CSS media queries, the layout seamlessly adapts to various screen sizes.",
@@ -65,7 +79,7 @@ function Projects({ ProjectRef }) {
             
         },
         {
-            id: 6,
+            id: 7,
             img: Todo,
             title: "ToDo List",
             Dec: "This project is a To-Do List application built using HTML, CSS, and JavaScript. It allows users to add, edit, and delete tasks while providing a clean and intuitive interface.",
@@ -74,14 +88,12 @@ function Projects({ ProjectRef }) {
             view: "https://github.com/Mr-Sudarshan-Patil/ToDo-List-WebPage",
             
         },
-        
-    
         // Add more card items if needed
     ];
 
     return (
         <>
-            <div className='text-center mt-20' ref={ProjectRef} style={{ paddingTop: '70px' }}>
+            <div className='text-center mt-20 ' ref={ProjectRef} style={{ paddingTop: '70px' }}>
                 <div className='mb-9'>
                     <div className='text-2xl font-semibold'>Projects</div>
                     <p className='text-md font-medium'>Things I've built so far</p>

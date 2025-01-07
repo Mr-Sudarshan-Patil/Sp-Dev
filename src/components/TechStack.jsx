@@ -9,6 +9,11 @@ import vec1 from '/Vector.png'
 import vec2 from '/Vector1.png'
 import vec3 from '/Vector2.png'
 import post from '/postman-icon.png'
+import node from '/jsIconGreen.svg'
+import express from '/express-js.svg'
+import gsap from "/greensock.svg"
+import mongodb from "/mongodb.svg"
+import python from  "/python.svg"
 import { motion } from 'framer-motion';
 
 function TechStack({ TechRef }) {
@@ -32,34 +37,56 @@ function TechStack({ TechRef }) {
             id: 4,
             logo: Group12,
             name: "group12",
-        },
-        {
+        },{
             id: 5,
-            logo: Group14,
-            name: "group14",
+            logo: node,
+            name: "nodejs"
         },
         {
             id: 6,
+            logo: express,
+            name: "expressJs"
+        },{
+            id: 7,
+            logo: gsap,
+            name: "gsap"
+        },{
+            id: 8,
+            logo: mongodb,
+            name: "mongoDB"
+        },
+        {
+            id: 9,
+            logo: python,
+            name: "python"
+        },
+        {
+            id: 10,
             logo: boot,
             name: "boot",
         },
         {
-            id: 7,
+            id: 11,
             logo: vec1,
             name: "vec1",
         },
         {
-            id: 8,
+            id: 12,
             logo: vec2,
             name: "vec2",
         },
         {
-            id: 9,
+            id: 13,
             logo: vec3,
             name: "vec3",
         },
         {
-            id: 10,
+            id: 14,
+            logo: Group14,
+            name: "group14",
+        },
+        {
+            id: 15,
             logo: post,
             name: "postman",
         },

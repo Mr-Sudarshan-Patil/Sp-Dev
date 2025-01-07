@@ -18,7 +18,7 @@ function Static() {
                     <dd className="text-gray-500 text-center">Web Projects <br/> &#40;Mini and Major&#41;</dd>
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                    <dt className="mb-2 text-2xl font-semibold">25+</dt>
+                    <dt className="mb-2 text-2xl font-semibold">35+</dt>
                     <dd className="text-gray-500 text-center">Public Repository</dd>
                 </div>
                 <div className="flex flex-col items-center justify-center">
