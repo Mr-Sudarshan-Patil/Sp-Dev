@@ -1,38 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="ypTEaYQ29HBccB5xXzBNGyqXKxky_woOqoNh49MNA9Q" />
-    <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <script type="text/javascript">
-      var pathSegmentsToKeep = 0;
-
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
-
-    </script>
-    <title>spwebdev</title>
-  
-  </head>
-  <body>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="ypTEaYQ29HBccB5xXzBNGyqXKxky_woOqoNh49MNA9Q">
     <title>Sp.Dev</title>
-  </head>
-  <body>
-    <div id="root"></div>
+
+    <script type="text/javascript">
+        // Redirect users to the correct route for GitHub Pages (SPA fix)
+        (function() {
+            var pathSegmentsToKeep = 0;
+            var l = window.location;
+            var newUrl =
+                l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
+                l.pathname.split("/").slice(0, 1 + pathSegmentsToKeep).join("/") +
+                "/?/" +
+                l.pathname.slice(1).split("/").slice(pathSegmentsToKeep).join("/").replace(/&/g, "~and~") +
+                (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+                l.hash;
+            
+            if (l.pathname !== "/" && !l.pathname.startsWith("/?/")) {
+                l.replace(newUrl);
+            }
+        })();
+    </script>
+
+    <!-- GSAP Animation Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- Main React App -->
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+</body>
 </html>
