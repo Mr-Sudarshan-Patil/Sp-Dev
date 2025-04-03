@@ -11,5 +11,5 @@ export default defineConfig({
       input: "public/index.html", 
     },
   },
-  base: "/Sp-Dev/",
+  base: "/", // Update this to "/"
 })
