@@ -140,7 +140,7 @@ function About({ experienceRef, aboutRef }) {
             <div className=" border-b-2 mt-9">
               <div className="flex justify-between">
                 <h1 className="text-md md:text-xl text-[#666666]">
-                  Frontend Developer
+                  Freelance WebDeveloper
                 </h1>
                 <span className="text-[0.7rem]  md:text-sm   rounded-full bg-[#D7FFE0] text-[#018C0F] text-center p-1">
                   Full Time
@@ -150,7 +150,7 @@ function About({ experienceRef, aboutRef }) {
                 <div className="flex  flex-wrap gap-2 md:gap-5 items-center">
                   <p className=" text-xs md:text-sm flex justify-center items-center">
                     <LiaIndustrySolid />
-                    Web Crypt Technology
+                    Self Employed
                   </p>
                   <p className="text-xs md:text-sm flex justify-center items-center">
                     <CiLocationOn /> Pune

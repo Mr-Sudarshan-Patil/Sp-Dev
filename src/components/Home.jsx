@@ -140,7 +140,7 @@ function Home({ homeRef }) {
                 <ul ref={SocialRef} className="flex space-x-3 text-2xl">
                   <li>
                     <a
-                      href="https://www.linkedin.com/in/https://www.linkedin.com/in/sudarshan-patil-b9501a196/"
+                      href="https://www.linkedin.com/in/er-sudarshan-patil/"
                       target="_blank"
                     >
                       <FaLinkedin className="hover:scale-105 duration-200 cursor-pointer hover:text-pink-500" />
